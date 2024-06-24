@@ -5,6 +5,10 @@ dotenv.config({
   path: './.env'
 })
 
+app.get('/', (req, res) => {
+  res.send('Transport Ease Server is Ready')
+})
+
 
 connectDB()
   .then(() => {

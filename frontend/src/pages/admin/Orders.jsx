@@ -30,7 +30,7 @@ const Orders = () => {
   };
 
   const fetchData = async () => {
-    fetch('http://localhost:8000/api/v1/orders/get-all-orders', options)
+    fetch('https://transport-ease-f2xq.onrender.com/api/v1/orders/get-all-orders', options)
       .then(response => response.json())
       .then(data => setData(data.data.orders))
       .catch(error => console.error(error));
@@ -38,7 +38,7 @@ const Orders = () => {
 
   const fetchDashboardData = async () => {
     // get-dashboard-data
-    fetch('http://localhost:8000/api/v1/orders/get-dashboard-data', options)
+    fetch('https://transport-ease-f2xq.onrender.com/api/v1/orders/get-dashboard-data', options)
       .then(response => response.json())
       .then(data => setDashboardData(data.data))
       .catch(error => console.error(error));

@@ -69,7 +69,7 @@ const CreateOrder = () => {
     };
 
     // /api/v1/orders
-    fetch('http://localhost:8000/api/v1/orders/place-order', options)
+    fetch('https://transport-ease-f2xq.onrender.com/api/v1/orders/place-order', options)
       .then(response => response.json())
       .then(data => {
         navigate('/orders')

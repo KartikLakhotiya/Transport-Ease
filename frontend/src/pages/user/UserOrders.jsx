@@ -30,7 +30,7 @@ const UserOrders = () => {
       },
     };
 
-    fetch('http://localhost:8000/api/v1/orders/get-my-orders', options)
+    fetch('https://transport-ease-f2xq.onrender.com/api/v1/orders/get-my-orders', options)
       .then(response => response.json())
       .then(data => setData(data.data.orders))
       .catch(error => console.error(error));

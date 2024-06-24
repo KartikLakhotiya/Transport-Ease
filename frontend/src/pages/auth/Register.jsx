@@ -33,7 +33,7 @@ const Register = () => {
       body: JSON.stringify(form)
     };
 
-    fetch('http://localhost:8000/api/v1/users/register-user', options)
+    fetch('https://transport-ease-f2xq.onrender.com/api/v1/users/register-user', options)
       .then(response => response.json())
       .then(data => {
         setLoading(false)
@@ -102,56 +102,56 @@ const Register = () => {
 
   return (
     <div>
-      <Navbar/>
-    <form onSubmit={handleSubmit} className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border p-10 rounded-lg shadow-lg min-w-[25rem] ' style={{marginTop:'60px',backgroundColor:'#003399',color:'white'}}>
-      <h1 className='text-2xl font-bold mb-7'>Register</h1>
-      <div className='flex flex-col mt-4'>
-        <label className='text-sm font-semibold '>Full Name</label>
-        <input
-          type='text'
-          name='fullName'
-          onChange={handleSetFormData}
-          placeholder='Enter Full Name...'
-          className='border px-3 py-3 mt-2 rounded-md text-sm'
-          style={{color:'black'}}
-        />
-      </div>
-      {formErrors['fullName'] && <p className='text-xs text-red-600 mt-2'>* name cannot be empty</p>}
-      <div className='flex flex-col mt-4'>
-        <label className='text-sm font-semibold '>Email</label>
-        <input
-          type='text'
-          name='email'
-          onChange={handleSetFormData}
-          placeholder='Enter Email...'
-          className='border px-3 py-3 mt-2 rounded-md text-sm'
-          style={{color:'black'}}
-        />
-      </div>
-      {formErrors['email'] && <p className='text-xs text-red-600 mt-2'>* email should be in correct format</p>}
-      <div className='flex flex-col mt-4'>
-        <label className='text-sm font-semibold '>Password</label>
-        <input
-          type='password'
-          name='password'
-          onChange={handleSetFormData}
-          placeholder='Enter Password...'
-          className='border px-3 py-3 mt-2 rounded-md text-sm'
-          style={{color:'black'}}
-        />
-      </div>
-      {formErrors['password'] && <p className='text-xs text-red-600 mt-2'>* password cannot be empty</p>}
-      <button
-        className='w-full border mt-8 py-3 font-semibold text-sm text-white bg-[#2756ff] rounded-md'
-        type='submit'
-        disabled={loading}
-      >
-        {
-          loading ? "Registering..." : "Register"
-        }
-      </button>
-      <p className='text-sm mt-3'>Already an user ? <Link to={'/login'} className='underline text-[#ffffff]'>Login</Link></p>
-    </form>
+      <Navbar />
+      <form onSubmit={handleSubmit} className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border p-10 rounded-lg shadow-lg min-w-[25rem] ' style={{ marginTop: '60px', backgroundColor: '#003399', color: 'white' }}>
+        <h1 className='text-2xl font-bold mb-7'>Register</h1>
+        <div className='flex flex-col mt-4'>
+          <label className='text-sm font-semibold '>Full Name</label>
+          <input
+            type='text'
+            name='fullName'
+            onChange={handleSetFormData}
+            placeholder='Enter Full Name...'
+            className='border px-3 py-3 mt-2 rounded-md text-sm'
+            style={{ color: 'black' }}
+          />
+        </div>
+        {formErrors['fullName'] && <p className='text-xs text-red-600 mt-2'>* name cannot be empty</p>}
+        <div className='flex flex-col mt-4'>
+          <label className='text-sm font-semibold '>Email</label>
+          <input
+            type='text'
+            name='email'
+            onChange={handleSetFormData}
+            placeholder='Enter Email...'
+            className='border px-3 py-3 mt-2 rounded-md text-sm'
+            style={{ color: 'black' }}
+          />
+        </div>
+        {formErrors['email'] && <p className='text-xs text-red-600 mt-2'>* email should be in correct format</p>}
+        <div className='flex flex-col mt-4'>
+          <label className='text-sm font-semibold '>Password</label>
+          <input
+            type='password'
+            name='password'
+            onChange={handleSetFormData}
+            placeholder='Enter Password...'
+            className='border px-3 py-3 mt-2 rounded-md text-sm'
+            style={{ color: 'black' }}
+          />
+        </div>
+        {formErrors['password'] && <p className='text-xs text-red-600 mt-2'>* password cannot be empty</p>}
+        <button
+          className='w-full border mt-8 py-3 font-semibold text-sm text-white bg-[#2756ff] rounded-md'
+          type='submit'
+          disabled={loading}
+        >
+          {
+            loading ? "Registering..." : "Register"
+          }
+        </button>
+        <p className='text-sm mt-3'>Already an user ? <Link to={'/login'} className='underline text-[#ffffff]'>Login</Link></p>
+      </form>
     </div>
   )
 }

@@ -1,0 +1,15 @@
+/* body {
+    background-color: var(--color-secondary);
+    background-image: url("./hero-bg.png");
+    background-size: cover;
+    background-position: center;
+  } */
+
+.login{
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-secondary);
+    background-image: url("./hero-bg.png");
+    background-size: cover;
+    background-position: center;
+}

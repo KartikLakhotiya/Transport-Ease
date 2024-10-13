@@ -32,7 +32,7 @@ const Login = () => {
       body: JSON.stringify(form)
     };
 
-    fetch('https://transport-ease-ev2z.onrender.com/api/v1/users/login-user', options)
+    fetch('https://transport-ease-6oqh.onrender.com/api/v1/users/login-user', options)
       .then(response => response.json())
       .then(data => {
         cookies.set('_user_token', data.data.accessToken)

@@ -30,7 +30,7 @@ const UserOrders = () => {
       },
     };
 
-    fetch('https://transport-ease-ev2z.onrender.com/api/v1/orders/get-my-orders', options)
+    fetch('https://transport-ease-6oqh.onrender.com/api/v1/orders/get-my-orders', options)
       .then(response => response.json())
       .then(data => setData(data.data.orders))
       .catch(error => console.error(error));

@@ -33,7 +33,7 @@ const Register = () => {
       body: JSON.stringify(form)
     };
 
-    fetch('https://transport-ease-ev2z.onrender.com/api/v1/users/register-user', options)
+    fetch('https://transport-ease-6oqh.onrender.com/api/v1/users/register-user', options)
       .then(response => response.json())
       .then(data => {
         setLoading(false)

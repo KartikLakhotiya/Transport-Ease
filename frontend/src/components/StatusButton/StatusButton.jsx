@@ -42,7 +42,7 @@ const OrderStatusButton = ({ orderStatus, fetchData, _id }) => {
     };
 
     // /api/v1/orders
-    fetch('https://transport-ease-ev2z.onrender.com/api/v1/orders/update-order', options)
+    fetch('https://transport-ease-6oqh.onrender.com/api/v1/orders/update-order', options)
       .then(response => response.json())
       .then(data => {
         console.log(data)
